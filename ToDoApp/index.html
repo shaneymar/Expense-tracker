@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/5ec4ad3cde.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <title>Expense Tracker</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="app">
+            <section class="greeting">
+                <h2 class="title">
+                     Hello <input type="text" id="name" placeholder="Name Here" />
+                    <p>Expense Tracker</p>
+                </h2>
+            </section>
+            <section class="create-todo">
+                <h3>Add your Expenses</h3>
+                <form action="" id="new-todo-form">
+                    <h4>What you have spent</h4>
+                    <input 
+                    type="text"
+                    name="content"
+                    value=""
+                    id="content"
+                    placeholder="Eg: Spent 1000rs on Clothing"
+                    />
+
+                <span id="error" class="error"></span>
+                <h4>Choose a category</h4>
+                <div class="options">
+                    <label>
+                        <input 
+                        type="radio"
+                        name="category"
+                        id="category"
+                        value="business"
+                        />
+                        <span class="bubble business"></span>
+                        <div>Food and Dining</div>
+                    </label>
+                    <label>
+                        <input 
+                        type="radio"
+                        name="category"
+                        id="category2"
+                        value="personal"
+                        />
+                        <span class="bubble personal"></span>
+                        <div>Bills and Utilities</div>
+                    </label>
+                </div>
+                <input type="submit" value="Add your Expenses" />
+                </form>
+            </section>
+
+            <section class="todo-list">
+                <h3>EXPENSES</h3>
+                <div class="list" id="todo-list">
+                    <div class="todo-item">
+                        <label>
+                            <input type="checkbox" />
+                            <span class="bubble business"></span>
+                        </label>
+
+                        <div class="todo-content">
+                            <input type="text" value="Read Chapter 8" readonly />
+                        </div>
+
+                        <div class="actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
